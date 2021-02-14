@@ -1,6 +1,8 @@
 // wildlife logo
 
 @color-orange: #CD6326;
+@color-orange-light: #E39128;
+@color-orange-dark: #8F5613;
 @font-dark: #333333;
 @bg-header-survival: #02160b;
 @font-light: #f7f7f7;
@@ -18,30 +20,36 @@ body {
 *,
 *:after,
 *:before {
-    box-sizing: inherit;
+    box-sizing: border-box;
 }
 
 .roboto () {
-    font-family: Roboto;
+    font-family: "Roboto";
     font-style: normal;
     font-weight: normal;
-    font-size: 32px;
-    line-height: 60px;
-    color: #F7F7F7;
+    font-size: 23px;
+    line-height: 27px;
+    color: @font-light;
+}
+
+.opensans () {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    color: @font-light;
 }
 
 h1 {
-    font-family: Open Sans;
-    font-style: normal;
-    font-weight: normal;
+    .opensans();
+    font-weight: 400;
     font-size: 48px;
     line-height: 72px;
+    letter-spacing: 2px;
     color: @color-orange;
 }
 
-.heading:before {
-    content: url('../img/logo.svg');
-}
 
 h2 {
     color: @font-dark;
@@ -61,17 +69,35 @@ h4 {
 
 ul li {
     list-style: none;
+
+}
+
+p {
+    .opensans();
+    color: @font-light;
+}
+
+.padding-top {
+    padding-top: 19px;
+
+}
+
+
+
+a {
+    text-decoration: none;
+    .opensans ();
 }
 
 .container {
     background-color: @bg-header-survival;
     margin: 0 auto;
-    // width: 1200px;
 }
 
 .header {
     margin: 0 auto;
     width: 1440px;
+    height: 779px;
     background: @bg-header-survival url(../img/bg-fox.jpg) center no-repeat;
     background-size: 100%;
 }
@@ -83,31 +109,113 @@ ul li {
 }
 
 .navbar {
-    vertical-align: middle;
-    text-align: center;
+
+    &__links {
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+    }
+
+    &-brand__text {
+        .roboto();
+        text-transform: uppercase;
+        margin: 0;
+        font-size: 32px;
+        line-height: 27px;
+    }
+
+    &-brand__text:before {
+
+        content: url('../img/logo.svg');
+        padding-right: 15px;
+        vertical-align: middle;
+    }
 }
+
+
 
 .row {
     display: flex;
     justify-content: space-between;
 
     nav {
-        display: inline-block;
         width: 510px;
 
-        ul {
-            position: relative;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: space-around;
-            transform: translateY(-50%);
-            top: 50%;
+        &-link {
+            justify-content: space-between;
         }
+
     }
+}
+
+.survival {
+    padding-top: 120px;
+
+    &-text {
+        padding-top: 51px;
+        padding-bottom: 49px;
+        max-width: 274px;
+    }
+}
+
+.btn {
+    .roboto();
+    // display: inline-block;
+    text-align: center;
+    padding-left: 23px;
+    padding-right: 23px;
+    padding-top: 6px;
+    padding-bottom: 7px;
+    border: 2px solid @color-orange;
+    border-radius: 5px;
+
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        background: @color-orange;
+        border: 2px solid @color-orange;
+    }
+
+    &:active {
+        background: @color-orange-dark;
+        border: 2px solid @color-orange-dark;
+    }
+
+}
+
+.button {
+    .roboto();
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23px;
+    line-height: 27px;
+    text-align: center;
+    padding: 16px 42px 17px 42px;
+    color: @font-light;
+    background: @color-orange;
+    border: 1px solid @color-orange;
+    border-radius: 5px;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        background: @color-orange-light;
+        border: 1px solid @color-orange-light;
+    }
+
+    &:active {
+        background: @color-orange-dark;
+        border: 1px solid @color-orange-dark;
+    }
+
 }
 
 
 .footer {
-    background-color: #181617
+    background-color: #181617;
 }
