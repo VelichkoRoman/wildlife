@@ -21,7 +21,7 @@ h1 {
   color: #cd6326;
 }
 .heading:before {
-  content: url('/img/logo.svg');
+  content: url('../img/logo.svg');
 }
 h2 {
   color: #333333;
