@@ -1,0 +1,113 @@
+// wildlife logo
+
+@color-orange: #CD6326;
+@font-dark: #333333;
+@bg-header-survival: #02160b;
+@font-light: #f7f7f7;
+@font-grey: #666666;
+
+html {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+.roboto () {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 60px;
+    color: #F7F7F7;
+}
+
+h1 {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 72px;
+    color: @color-orange;
+}
+
+.heading:before {
+    content: url('/img/logo.svg');
+}
+
+h2 {
+    color: @font-dark;
+}
+
+sh-2 {
+    color: @font-grey;
+}
+
+h3 {
+    color: @font-dark;
+}
+
+h4 {
+    color: @font-light;
+}
+
+ul li {
+    list-style: none;
+}
+
+.container {
+    background-color: @bg-header-survival;
+    margin: 0 auto;
+    // width: 1200px;
+}
+
+.header {
+    margin: 0 auto;
+    width: 1440px;
+    background: @bg-header-survival url(../img/bg-fox.jpg) center no-repeat;
+    background-size: 100%;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+.navbar {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+
+    nav {
+        display: inline-block;
+        width: 510px;
+
+        ul {
+            position: relative;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            transform: translateY(-50%);
+            top: 50%;
+        }
+    }
+}
+
+
+.footer {
+    background-color: #181617
+}

@@ -1,0 +1,86 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+}
+body {
+  margin: 0;
+}
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+h1 {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 72px;
+  color: #cd6326;
+}
+.heading:before {
+  content: url('/img/logo.svg');
+}
+h2 {
+  color: #333333;
+}
+sh-2 {
+  color: #666666;
+}
+h3 {
+  color: #333333;
+}
+h4 {
+  color: #f7f7f7;
+}
+ul li {
+  list-style: none;
+}
+.container {
+  background-color: #02160b;
+  margin: 0 auto;
+}
+.header {
+  margin: 0 auto;
+  width: 1440px;
+  background: #02160b url(../img/bg-fox.jpg) center no-repeat;
+  background-size: 100%;
+}
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.navbar {
+  vertical-align: middle;
+  text-align: center;
+}
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.row nav {
+  display: inline-block;
+  width: 510px;
+}
+.row nav ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  top: 50%;
+}
+.footer {
+  background-color: #181617;
+}
