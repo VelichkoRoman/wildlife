@@ -25,6 +25,10 @@ h1 {
   letter-spacing: 2px;
   color: #cd6326;
 }
+
+.heading:before {
+  content: url('../img/logo.svg');
+}
 h2 {
   color: #333333;
 }
