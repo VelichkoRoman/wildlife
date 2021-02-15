@@ -1,2 +1,2 @@
 # wildlife
-[wildlife](https://velichkoroman.github.io/wildlife/index)
+[wildlife](https://velichkoroman.github.io/wildlife/)
