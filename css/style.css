@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem8YaGs126MiZpBA-U1Ug.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Me5Q.ttf) format('truetype');
+}
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -13,7 +27,7 @@ body {
           box-sizing: border-box;
 }
 h1 {
-  font-family: "Open Sans";
+  font-family: 'Open Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -24,10 +38,6 @@ h1 {
   line-height: 72px;
   letter-spacing: 2px;
   color: #cd6326;
-}
-
-.heading:before {
-  content: url('../img/logo.svg');
 }
 h2 {
   color: #333333;
@@ -45,7 +55,7 @@ ul li {
   list-style: none;
 }
 p {
-  font-family: "Open Sans";
+  font-family: 'Open Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -53,22 +63,30 @@ p {
   color: #f7f7f7;
 }
 .padding-top {
-  padding-top: 19px;
+  padding-top: 17px;
 }
 a {
   text-decoration: none;
-  font-family: "Open Sans";
+  font-family: 'Open Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 27px;
   color: #f7f7f7;
 }
-.container {
+.bg-1 {
   background-color: #02160b;
+}
+.bg-2 {
+  background-color: #cccccc;
+}
+.bg-3 {
+  background-color: #181617;
+}
+.container {
   margin: 0 auto;
 }
-.header {
+.section-first {
   margin: 0 auto;
   width: 1440px;
   height: 779px;
@@ -87,17 +105,18 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0;
+  padding-top: 3px;
 }
 .navbar-brand__text {
-  font-family: "Roboto";
+  font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 23px;
+  line-height: 27px;
   color: #f7f7f7;
   text-transform: uppercase;
-  margin: 0;
+  margin-top: 3px;
   font-size: 32px;
-  line-height: 27px;
 }
 .navbar-brand__text:before {
   content: url('../img/logo.svg');
@@ -113,23 +132,25 @@ a {
           justify-content: space-between;
 }
 .row nav {
-  width: 510px;
+  width: 481px;
 }
-.row nav-link {
+.row nav a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  font-size: 23px;
+  line-height: 27px;
 }
 .survival {
-  padding-top: 120px;
+  padding-top: 53px;
 }
 .survival-text {
-  padding-top: 51px;
-  padding-bottom: 49px;
+  padding-top: 18px;
+  padding-bottom: 30px;
   max-width: 274px;
 }
 .btn {
-  font-family: "Roboto";
+  font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 23px;
@@ -138,8 +159,8 @@ a {
   text-align: center;
   padding-left: 23px;
   padding-right: 23px;
-  padding-top: 6px;
-  padding-bottom: 7px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   border: 2px solid #cd6326;
   border-radius: 5px;
 }
@@ -155,7 +176,7 @@ a {
   border: 2px solid #8f5613;
 }
 .button {
-  font-family: "Roboto";
+  font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 23px;
@@ -177,6 +198,46 @@ a {
 .button:active {
   background: #8f5613;
   border: 1px solid #8f5613;
+}
+.section-two {
+  padding: 121px;
+  text-align: center;
+}
+.latest-articles {
+  margin: 0 auto;
+}
+.slider-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.slider-slides {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+.slider-slide {
+  width: calc(33.33333333%);
+  height: 100px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.slider-button__right {
+  background: url('../img/arrow-right.svg');
 }
 .footer {
   background-color: #181617;

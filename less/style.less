@@ -1,10 +1,32 @@
-// wildlife logo
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
+
+
+
+.roboto () {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23px;
+    line-height: 27px;
+    color: @font-light;
+}
+
+.opensans () {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    color: @font-light;
+}
 
 @color-orange: #CD6326;
 @color-orange-light: #E39128;
 @color-orange-dark: #8F5613;
 @font-dark: #333333;
 @bg-header-survival: #02160b;
+@bg-latest-notified: #cccccc;
+@bg-footer: #181617;
 @font-light: #f7f7f7;
 @font-grey: #666666;
 
@@ -23,23 +45,6 @@ body {
     box-sizing: border-box;
 }
 
-.roboto () {
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 23px;
-    line-height: 27px;
-    color: @font-light;
-}
-
-.opensans () {
-    font-family: "Open Sans";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 27px;
-    color: @font-light;
-}
 
 h1 {
     .opensans();
@@ -50,10 +55,6 @@ h1 {
     color: @color-orange;
 }
 
-
-.heading:before {
-    content: url('../img/logo.svg');
-}
 
 h2 {
     color: @font-dark;
@@ -82,23 +83,36 @@ p {
 }
 
 .padding-top {
-    padding-top: 19px;
+    padding-top: 17px;
 
 }
-
-
 
 a {
     text-decoration: none;
     .opensans ();
 }
 
+.bg {
+    &-1 {
+        background-color: @bg-header-survival;
+    }
+
+    &-2 {
+        background-color: @bg-latest-notified;
+
+    }
+
+    &-3 {
+        background-color: @bg-footer;
+    }
+}
+
+
 .container {
-    background-color: @bg-header-survival;
     margin: 0 auto;
 }
 
-.header {
+.section-first {
     margin: 0 auto;
     width: 1440px;
     height: 779px;
@@ -118,14 +132,14 @@ a {
         display: flex;
         justify-content: space-between;
         padding: 0;
+        padding-top: 3px;
     }
 
     &-brand__text {
         .roboto();
         text-transform: uppercase;
-        margin: 0;
+        margin-top: 3px;
         font-size: 32px;
-        line-height: 27px;
     }
 
     &-brand__text:before {
@@ -136,43 +150,41 @@ a {
     }
 }
 
-
-
 .row {
     display: flex;
     justify-content: space-between;
 
     nav {
-        width: 510px;
+        width: 481px;
 
-        &-link {
+        a {
             justify-content: space-between;
+            font-size: 23px;
+            line-height: 27px;
         }
-
     }
 }
 
 .survival {
-    padding-top: 120px;
+    padding-top: 53px;
 
     &-text {
-        padding-top: 51px;
-        padding-bottom: 49px;
+        padding-top: 18px;
+        padding-bottom: 30px;
         max-width: 274px;
     }
 }
 
 .btn {
     .roboto();
-    // display: inline-block;
     text-align: center;
     padding-left: 23px;
     padding-right: 23px;
-    padding-top: 6px;
-    padding-bottom: 7px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    ;
     border: 2px solid @color-orange;
     border-radius: 5px;
-
 
     &:focus {
         outline: none;
@@ -216,8 +228,47 @@ a {
         background: @color-orange-dark;
         border: 1px solid @color-orange-dark;
     }
+}
+
+.section-two {
+    padding: 121px;
+    text-align: center;
 
 }
+
+.latest-articles {
+    margin: 0 auto;
+
+}
+
+// *SLIDER* 
+
+.slider-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.slider-slides {
+    display: flex;
+    width: 100%;
+    // overflow: hidden;
+}
+
+.slider-slide {
+    width: calc(100%/3);
+    height: 100px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.slider-button__right {
+    background: url('../img/arrow-right.svg');
+}
+
 
 
 .footer {
