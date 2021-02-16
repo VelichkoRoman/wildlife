@@ -23,8 +23,8 @@ body {
 *,
 *:after,
 *:before {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 h1 {
   font-family: 'Open Sans', sans-serif;
@@ -141,6 +141,12 @@ a {
   font-size: 23px;
   line-height: 27px;
 }
+.nav-item:not(:nth-of-type(4)):hover {
+  opacity: 0.7;
+}
+.nav-item:not(:nth-of-type(4)):active {
+  opacity: 0.3;
+}
 .survival {
   padding-top: 53px;
 }
@@ -188,10 +194,9 @@ a {
   border: 1px solid #cd6326;
   border-radius: 5px;
 }
+.button:hover,
 .button:focus {
   outline: none;
-}
-.button:hover {
   background: #e39128;
   border: 1px solid #e39128;
 }
@@ -206,38 +211,54 @@ a {
 .latest-articles {
   margin: 0 auto;
 }
-.slider-wrapper {
+.slider {
+  width: 822px;
+  height: 256px;
+  margin: 30px auto;
+  overflow: hidden;
+}
+.slider-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.slider-slides {
+.slider img {
+  padding: 0 30px;
+}
+.slider-line {
+  height: 256px;
+  width: 1644px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
+  position: relative;
+  left: 0;
+  -webkit-transition: all ease 1s;
+  transition: all ease 1s;
 }
-.slider-slide {
-  width: calc(33.33333333%);
-  height: 100px;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.slider-btn {
+  -webkit-transform: translate(0, 150%);
+          transform: translate(0, 150%);
+  padding: 0 30px;
 }
-.slider-button__right {
-  background: url('../img/arrow-right.svg');
+.slider-btn:hover {
+  opacity: 0.2;
+}
+.slider-btn:active {
+  opacity: 0.7;
+}
+.slider-prev {
+  background: url('../img/arrow-left.svg') no-repeat center;
+  height: 70px;
+  width: 30px;
+}
+.slider-next {
+  background: url('../img/arrow-right.svg') no-repeat center;
+  height: 70px;
+  width: 30px;
 }
 .footer {
   background-color: #181617;
