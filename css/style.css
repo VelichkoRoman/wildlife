@@ -196,11 +196,13 @@ nav {
   font-size: 18px;
   line-height: 27px;
   color: #f7f7f7;
+  color: #333333;
   font-size: 48px;
   line-height: 72px;
   text-align: center;
 }
 .subtitle {
+  color: #666666;
   padding-top: 19px;
   font-size: 24px;
   line-height: 36px;
@@ -281,6 +283,7 @@ nav {
   font-size: 18px;
   line-height: 27px;
   color: #f7f7f7;
+  color: #333333;
   font-size: 27px;
   line-height: 40px;
   text-align: center;
