@@ -29,9 +29,6 @@ h2,
 h3 {
   color: #333333;
 }
-sh-2 {
-  color: #666666;
-}
 h4 {
   color: #f7f7f7;
 }
@@ -315,7 +312,7 @@ input:nth-of-type(2) {
   padding: 0;
   margin: 0 auto;
 }
-input[type="email"] {
+input[type="text"] {
   padding-left: 15px;
 }
 .input-area {
