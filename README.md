@@ -1,2 +1,2 @@
 # wildlife
-[wildlife](https://velichkoroman.github.io/wildlife/)
+[wildlife](https://velichkoroman-wildlife.netlify.app/)
